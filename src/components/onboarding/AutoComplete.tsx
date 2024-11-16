@@ -280,9 +280,9 @@ export default function AutoComplete() {
           value={inputValue}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          className="w-[221px] bg-white h-[33px] lg:w-[40%] lg:py-10 mt-[13px] lg:mt-20 text-[12px] text-darkSilverColor pl-8 py-[10px] lg:text-xl rounded-2xl lg:rounded-3xl"
+          className="w-[289px] bg-white h-[33px]  mt-[13px]  text-[12px] text-darkSilverColor pl-8 py-[10px]  rounded-2xl md:mt-20 md:w-[594px] md:h-[68px] md:text-[26px] "
           style={{
-            paddingLeft: "25px", // make room for the magnifying glass icon
+            // paddingLeft: "25px", // make room for the magnifying glass icon
             backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23666' d='M14.7 13.3l-3-3a6.5 6.5 0 10-.9.9l3 3a.7.7 0 101-1zM1 6.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0z'/%3E%3C/svg%3E")`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "15px 15px",
@@ -304,19 +304,21 @@ export default function AutoComplete() {
 
       {showAutoDropdown && (
         <div
+        className="w-[289px] px-6 top-[50px] md:w-[594px] md:top-[152px] h-[200px] md:h-[416px] md:px-[50px]"
           style={{
             position: "absolute",
-            top: 50,
+            // top: 50,
             zIndex: 1,
             background: "#fff",
             border: "2px solid #ccc",
             marginTop: "0px",
-            width: "300px",
+            // width: "300px",
             overflowY: "auto",
-            maxHeight: "200px", // maxHeight to enable scroll
+            // maxHeight: "200px", // maxHeight to enable scroll
           }}>
           {showEnterManually && (
             <div
+           
               style={{
                 display: "flex",
                 justifyContent: "flex-start",
@@ -331,7 +333,9 @@ export default function AutoComplete() {
                   overflow: "hidden",
                   //textOverflow: 'ellipsis',
                 }}>
-                <div style={{ marginRight: "0px" }}>
+                <div
+                 className='text-[10px] md:text-[18px]'
+                style={{ marginRight: "0px" }}>
                   Don&apos;t see your business?
                 </div>
               </div>
@@ -346,7 +350,9 @@ export default function AutoComplete() {
                   fontSize: "0.85em",
                   paddingTop: "2px",
                 }}>
-                <span style={{ color: "#007bff" }}>Enter it manually</span>
+                <span
+                className='text-[10px] md:text-[18px]'
+                style={{ color: "#007bff" }}>Enter it manually</span>
                 <span>.</span>
               </button>
             </div>
@@ -363,11 +369,13 @@ export default function AutoComplete() {
                   marginBottom: "0px",
                   padding: "6px",
                 }}>
-                <div>
+                <div className="text-[12px] md:text-[26px]">
                   <b>{name}</b>
                 </div>
                 {rest.length > 0 && (
-                  <div style={{ fontSize: "small", color: "#555" }}>
+                  <div
+                  className="text-[10px] md:text-[18px]"
+                  style={{  color: "#555" }}>
                     {rest.join(",").substring(1)}
                   </div>
                 )}
@@ -383,12 +391,14 @@ export default function AutoComplete() {
               padding: "4px",
             }}>
             <Image
+            className="w-[74px] h-[24px] md:w-[150px] md:h-[50px]"
               src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png"
               alt="Powered by Google"
               width={74}
               height={24}
             />
             <a
+            className="text-[12px] md:text-[26px] ml-1"
               href="https://www.google.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -487,27 +497,41 @@ export default function AutoComplete() {
               className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
               style={{
                 marginTop: "8px",
-                width: "61%",
+                width: "50%",
                 marginRight: "4%",
                 height: "35px",
                 padding: "4px",
                 boxSizing: "border-box",
               }}
             />
-            <select
+             <input
+              type="text"
+              placeholder="State/Province"
+              value={city}
+              onChange={handleCityChange}
+              className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
+              style={{
+                marginTop: "8px",
+                width: "45%",
+                height: "35px",
+                padding: "4px",
+                boxSizing: "border-box",
+              }}
+            />
+            {/* <select
               value={selectedState}
               onChange={handleStateChange}
               className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
               style={{
-                width: "35%",
+                width: "45%",
                 height: "35px",
                 padding: "4px",
                 boxSizing: "border-box",
               }}>
-              <option value="">State/Provi...</option>
-              {/* The other options here... */}
+              <option value="" className="text-[#6D6D6D]">State/Province</option>
+             
               <option value="New York">NY</option>
-            </select>
+            </select> */}
             <input
               type="text"
               placeholder="ZIP/Postal Code"
@@ -516,7 +540,7 @@ export default function AutoComplete() {
               className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
               style={{
                 marginTop: "8px",
-                width: "36%",
+                width: "50%",
                 marginRight: "4%",
                 height: "35px",
                 padding: "4px",
@@ -528,7 +552,7 @@ export default function AutoComplete() {
               onChange={handleCountryChange}
               className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
               style={{
-                width: "60%",
+                width: "45%",
                 height: "35px",
                 padding: "4px",
                 boxSizing: "border-box",
@@ -541,7 +565,7 @@ export default function AutoComplete() {
         </div>
       )}
       <button
-        className="text-[16px] md:text-lg font-bold text-white py-[10px]  mt-[17px]  w-[221px] lg:w-[35%] lg:mt-40 lg:text-[36px] lg:py-4 text-center bg-palatinatePurple rounded-2xl lg:rounded-[30px]"
+        className="text-[16px] md:text-[36px] font-bold text-white py-[10px]  mt-[17px]  w-[221px] md:w-[580px] md:mt-40  md:py-4 text-center bg-palatinatePurple rounded-2xl md:rounded-[30px]"
         onClick={handleContinueClick}
         style={{ cursor: "pointer" }}>
         Continue

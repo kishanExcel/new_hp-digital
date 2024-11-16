@@ -24,6 +24,7 @@ const TeamSetup: React.FC = () => {
     //   .catch((error) => console.error("Navigation error:", error));
     try {
       await router.push("/onboarding/education/schedule-call");
+      // await router.push("/onboarding/education/integrations");
       // Optionally, handle successful navigation here if needed
     } catch (error) {
       console.error("An error occurred during navigation:", error);
@@ -82,7 +83,7 @@ const TeamSetup: React.FC = () => {
               type="text"
               value={signedInUser ? signedInUser : undefined}
               readOnly
-              className="w-[289px] lg:w-full h-[33px] mt-[11px] text-[12px] text-[#6D6D6D] pl-[18px] py-[10px] lg:text-lg lg:py-7 rounded-xl lg:rounded-3xl"
+              className="w-[289px] lg:w-full h-[33px] mt-[11px] text-[12px] text-[#6D6D6D] pl-[18px] py-[10px] lg:text-[22px] lg:py-7 rounded-xl lg:rounded-3xl"
             />
             <svg
               width="20"
@@ -107,7 +108,7 @@ const TeamSetup: React.FC = () => {
               placeholder="Employee #1's mobile phone or email"
               value={employee1Contact}
               onChange={(e) => setEmployee1Contact(e.target.value)}
-              className="w-[289px] lg:w-[40%] bg-white h-[33px] mt-[11px] text-[12px] text-darkSilverColor pl-[18px] py-[10px]  lg:text-lg lg:py-7 rounded-xl lg:rounded-3xl"
+              className="w-[289px] lg:w-[40%] bg-white h-[33px] mt-[11px] text-[12px] text-darkSilverColor pl-[18px] py-[10px]  lg:text-[22px] lg:py-7 rounded-xl lg:rounded-3xl"
             />
           </div>
 
@@ -117,7 +118,7 @@ const TeamSetup: React.FC = () => {
               placeholder="Employee #2's mobile phone or email"
               value={employee2Contact}
               onChange={(e) => setEmployee2Contact(e.target.value)}
-              className="w-[289px] lg:w-[40%] bg-white h-[33px] mt-[11px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] lg:text-lg lg:py-7 rounded-xl lg:rounded-3xl"
+              className="w-[289px] lg:w-[40%] bg-white h-[33px] mt-[11px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] lg:text-[22px] lg:py-7 rounded-xl lg:rounded-3xl"
             />
           </div>
 
@@ -127,18 +128,18 @@ const TeamSetup: React.FC = () => {
               placeholder="Employee #3's mobile phone or email"
               value={employee3Contact}
               onChange={(e) => setEmployee3Contact(e.target.value)}
-              className="w-[289px] lg:w-[40%] bg-white h-[33px] mt-[11px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] lg:text-lg lg:py-7 rounded-xl lg:rounded-3xl"
+              className="w-[289px] lg:w-[40%] bg-white h-[33px] mt-[11px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] lg:text-[22px] lg:py-7 rounded-xl lg:rounded-3xl"
             />
           </div>
           <div className="flex justify-center mt-[24px] mb-10">
             <button
-              className="text-[16px] lg:text-[36px] font-bold text-white py-[10px] w-[120px] text-center  bg-palatinatePurple rounded-2xl lg:rounded-3xl"
+              className="text-[16px] lg:text-[36px] font-bold text-white py-[10px] w-[120px] text-center  bg-palatinatePurple rounded-2xl lg:rounded-3xl lg:w-[202px]"
               onClick={handleSkip}
               style={{ cursor: "pointer" }}>
               Skip
             </button>
             <button
-              className="text-[16px] lg:text-[36px] font-bold text-white py-[10px] w-[183px] text-center bg-palatinatePurple rounded-2xl lg:rounded-3xl"
+              className="text-[16px] lg:text-[36px] font-bold text-white py-[10px] w-[183px] text-center bg-palatinatePurple rounded-2xl lg:rounded-3xl lg:w-[312px]"
               onClick={handleContinue}
               style={{ marginLeft: "10px", cursor: "pointer" }}>
               Continue

@@ -75,7 +75,7 @@ const Companies: React.FC = () => {
                 />
 
                 <CompaniesCard
-                  comLogo={Company1}
+                  comLogo={Company2}
                   comName={"Hanover Attorney At Law"}
                   comDesc={"Legal Services"}
                   compContacts={17}
@@ -91,7 +91,7 @@ const Companies: React.FC = () => {
                 />
 
                 <CompaniesCard
-                  comLogo={Company1}
+                  comLogo={Company2}
                   comName={"Hanover Attorney At Law"}
                   comDesc={"Legal Services"}
                   compContacts={17}

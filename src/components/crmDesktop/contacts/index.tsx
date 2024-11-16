@@ -392,58 +392,6 @@ const Contacts: React.FC = () => {
                       daysAgo="6"
                     />
                   </Link>
-                  <Link
-                    href={{
-                      pathname: "/crm/contacts/detailContact",
-                      query: { name: "Contact" },
-                    }}>
-                    <ContactCardSample
-                      name="John Doe"
-                      role="CEO at"
-                      notes={3}
-                      tags={["football-fun", "musician"]}
-                      daysAgo="6"
-                    />
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: "/crm/contacts/detailContact",
-                      query: { name: "Contact" },
-                    }}>
-                    <ContactCardSample
-                      name="John Doe"
-                      role="CEO at"
-                      notes={3}
-                      tags={["football-fun", "musician"]}
-                      daysAgo="6"
-                    />
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: "/crm/contacts/detailContact",
-                      query: { name: "Contact" },
-                    }}>
-                    <ContactCardSample
-                      name="John Doe"
-                      role="CEO at"
-                      notes={3}
-                      tags={["football-fun", "musician"]}
-                      daysAgo="6"
-                    />
-                  </Link>
-                  <Link
-                    href={{
-                      pathname: "/crm/contacts/detailContact",
-                      query: { name: "Contact" },
-                    }}>
-                    <ContactCardSample
-                      name="John Doe"
-                      role="CEO at"
-                      notes={3}
-                      tags={["football-fun", "musician"]}
-                      daysAgo="6"
-                    />
-                  </Link>
                 </>
                 
               )}

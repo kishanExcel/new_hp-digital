@@ -140,7 +140,7 @@ const Webchat: React.FC = () => {
                 type="text"
                 value={websiteName}
                 onChange={(e) => setWebsiteName(e.target.value)}
-                className="w-[229px]   bg-white h-[33px] text-[12px] text-darkSilverColor pl-[18px]  rounded-lg"
+                className="w-[229px]   bg-white h-[33px] text-[12px] text-darkSilverColor pl-[18px]  rounded-lg lg:text-[30px]"
                 style={{
                   border: "none",
                   outline: "none",
@@ -148,11 +148,10 @@ const Webchat: React.FC = () => {
               />
               {websiteName && (
                 <span
-                  className="text-[#6D6D6D] lg:text-[30px]"
+                  className="text-[#6D6D6D] text-[16px] lg:text-[30px]"
                   onClick={clearInput}
                   style={{
                     cursor: "pointer",
-                    fontSize: "16px",
                     margin: "0 5px",
                   }}>
                   ×
@@ -186,13 +185,13 @@ const Webchat: React.FC = () => {
                 <div
                   style={{
                     position: "absolute",
-                    top: "50%",
+                    top: "60%",
                     left: "50%",
                     transform: "translate(-50%, -50%)",
                   }}>
                   {/* Spinner, can customize this part */}
                   <div
-                    className="w-[36px] h-[36px] lg:w-[50%] lg:h-[100px]"
+                    className="w-[36px] h-[36px] lg:w-[100px] lg:h-[100px]"
                     style={{
                       border: "4px solid rgba(0, 0, 0, 0.1)",
                       borderRadius: "50%",
@@ -203,10 +202,10 @@ const Webchat: React.FC = () => {
               )}
               <div className="relative">
                 <iframe
-                  className="w-[300px] md:w-[500px] lg:w-[1000px]"
+                  className="w-[300px] h-[200px] md:w-[500px] md:h-[300px] lg:w-[904px] lg:h-[397px]"
                   src={`https://${currentPreviewWebsite}`}
-                  width="300px"
-                  height="300px"
+                  // width="300px"
+                  // height="300px"
                   style={{ border: "none" }}
                   title="Website Preview"
                   onLoad={handleLoad} // Call handleLoad function when the iframe content has finished loading
@@ -253,7 +252,7 @@ const Webchat: React.FC = () => {
                 alignItems: "center",
               }}>
               <div
-                className="bg-cultured w-full lg:w-[50%]"
+                className="bg-cultured w-full lg:w-[40%] flex flex-col justify-center items-center lg:rounded-2xl"
                 style={{
                   position: "relative", // to contain the absolute positioned close button
                   padding: "20px",
@@ -262,6 +261,7 @@ const Webchat: React.FC = () => {
                 }}>
                 <span
                   onClick={closeModal}
+                  className="md:text-[30px]"
                   style={{
                     position: "absolute",
                     top: "10px",
@@ -280,21 +280,22 @@ const Webchat: React.FC = () => {
                   over an email explaining how to add Webchat to your website.
                 </p>
                 <label
-                  className="text-[12px] lg:text-[25px] text-darkSilverColor font-bold mt-[24px]"
+                  className="text-[12px] lg:text-[25px] text-darkSilverColor font-bold mt-[24px] w-full"
                   style={{
                     fontWeight: "bold",
                     display: "block",
                   }}>
                   Email Address
                 </label>
-                <div
+                <div 
+                className="w-full justify-center mt-2"
                   style={{
                     display: "flex",
                     alignItems: "center",
                     marginBottom: "10px",
                   }}>
                   <input
-                    className=" bg-white h-[33px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] lg:py-7 rounded-xl lg:rounded-3xl"
+                    className=" bg-white h-[33px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] lg:py-7 rounded-xl lg:rounded-3xl lg:text-[26px] w-[80%]"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -302,7 +303,7 @@ const Webchat: React.FC = () => {
                     style={{ flex: 1, marginRight: "10px" }}
                   />
                   <button
-                    className="text-[16px] rounded-xl lg:rounded-3xl font-bold lg:text-[36px] text-white py-[7px] px-[14px] text-center  bg-palatinatePurple"
+                    className="text-[16px] rounded-xl lg:rounded-3xl font-bold lg:text-[36px] text-white py-[7px] px-[14px] text-center  bg-palatinatePurple w-[20%]"
                     onClick={addEmail}
                     style={{ marginRight: "10px", fontWeight: "bold" }}>
                     Add
@@ -310,7 +311,7 @@ const Webchat: React.FC = () => {
                 </div>
 
                 <div
-                  className="text-[12px] text-darkSilverColor"
+                  className="text-[12px] text-darkSilverColor w-full mt-2"
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -328,18 +329,20 @@ const Webchat: React.FC = () => {
                   </label>
                 </div>
 
-                <div className="text-[14px] font-bold lg:pt-16 lg:text-[30px] lg:leading-8 px-2 text-darkSilverColor mt-[11px] text-center">
+                <div className="text-[14px] font-bold lg:pt-16 lg:text-[36px] lg:leading-8 px-2 text-darkSilverColor mt-[11px] text-center">
                   If you would like us to do this for you, free of charge, just
                   click the DFY button
                 </div>
-                <ul style={{ marginTop: "20px", listStyleType: "none" }}>
+                <ul 
+                className="lg:text-[26px]"
+                style={{ marginTop: "20px", listStyleType: "none" }}>
                   {emailList.map((e, idx) => (
                     <li key={idx}>{e}</li>
                   ))}
                 </ul>
-                <div className="flex justify-end">
+                <div className="flex justify-end w-full">
                   <button
-                    className="bg-limeGreen px-3 py-1 font-bold rounded-xl"
+                    className="bg-limeGreen px-3 py-1 font-bold rounded-xl md:text-[36px] md:px-7"
                     onClick={sendEmail}>
                     DFY
                   </button>

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import Layout from "../layout";
 import Link from "next/link";
 import Company1 from "../../../assets/images/companies-1.png";
+import Company2 from "../../../assets/images/companies-2.png";
 import CompaniesCard from "../components/companiesCard";
 import AddNewCompany from "./addNewCompany";
 import FilterCompanies from "./filterCompanies";
@@ -23,6 +24,7 @@ const Companies: React.FC = () => {
   const router = useRouter();
   const { data: session, status } = useSession();
   // console.log("session?.session[0]", session?.session[0]);
+  console.log("session?.session[0]", session);
   // const [token, setToken] = useState(session?.session[0]);
   const [companiesList, setCompaniesList] = useState([]);
   const [dealsdata, setDealsdata] = useState([]);
@@ -202,6 +204,15 @@ const Companies: React.FC = () => {
                     <div className="w-full mx-auto ">
                       <CompaniesCard
                         comLogo={Company1}
+                        comName={"Hanover Attorney At Law"}
+                        comDesc={"Legal Services"}
+                        compContacts={17}
+                        compDeals={7}
+                      />
+                    </div>
+                    <div className="w-full mx-auto">
+                      <CompaniesCard
+                        comLogo={Company2}
                         comName={"Handyman Repair Service"}
                         comDesc={"Legal Services"}
                         compContacts={17}
@@ -219,8 +230,8 @@ const Companies: React.FC = () => {
                     </div>
                     <div className="w-full mx-auto">
                       <CompaniesCard
-                        comLogo={Company1}
-                        comName={"Handyman Repair Service"}
+                        comLogo={Company2}
+                        comName={"Hanover Attorney At Law"}
                         comDesc={"Legal Services"}
                         compContacts={17}
                         compDeals={7}
@@ -234,10 +245,9 @@ const Companies: React.FC = () => {
                         compContacts={17}
                         compDeals={7}
                       />
-                    </div>
-                    <div className="w-full mx-auto">
+                    </div><div className="w-full mx-auto">
                       <CompaniesCard
-                        comLogo={Company1}
+                        comLogo={Company2}
                         comName={"Handyman Repair Service"}
                         comDesc={"Legal Services"}
                         compContacts={17}
@@ -253,7 +263,7 @@ const Companies: React.FC = () => {
                       />
                     </div><div className="w-full mx-auto">
                       <CompaniesCard
-                        comLogo={Company1}
+                        comLogo={Company2}
                         comName={"Handyman Repair Service"}
                         comDesc={"Legal Services"}
                         compContacts={17}
@@ -269,15 +279,7 @@ const Companies: React.FC = () => {
                       />
                     </div><div className="w-full mx-auto">
                       <CompaniesCard
-                        comLogo={Company1}
-                        comName={"Handyman Repair Service"}
-                        comDesc={"Legal Services"}
-                        compContacts={17}
-                        compDeals={7}
-                      />
-                    </div><div className="w-full mx-auto">
-                      <CompaniesCard
-                        comLogo={Company1}
+                        comLogo={Company2}
                         comName={"Handyman Repair Service"}
                         comDesc={"Legal Services"}
                         compContacts={17}
@@ -294,7 +296,7 @@ const Companies: React.FC = () => {
                     </div>
                     <div className="w-full mx-auto">
                       <CompaniesCard
-                        comLogo={Company1}
+                        comLogo={Company2}
                         comName={"Handyman Repair Service"}
                         comDesc={"Legal Services"}
                         compContacts={17}

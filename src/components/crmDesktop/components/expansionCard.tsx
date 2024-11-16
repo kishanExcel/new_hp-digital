@@ -7,13 +7,14 @@ interface ExpansionCardProps {
   dealNumber: string;
   amount: number;
   companyName: string;
+  logo:any
 }
 
-const ExpansionCard: React.FC<ExpansionCardProps> = ({ description, dealNumber, amount, companyName }) => {
+const ExpansionCard: React.FC<ExpansionCardProps> = ({logo, description, dealNumber, amount, companyName }) => {
   return (
     <div className=" bg-white py-[22px] mt-[12px] flex items-center rounded-lg  ">
       <div className="logo bg-chinesWhite h-[41px] 2xl:h-[51px] w-[51px] 2xl:w-[51px] 2xl:ml-[22px] ml-[11px] rounded-full ">
-        <Image src={company1} alt="" />
+        <Image src={logo} alt="" />
       </div>
       <div className="ml-[11px]">
         <h5 className="text-[12px] xl:text-[12px] 2xl:text-[18px] md:text-darkSilverColor font-bold">

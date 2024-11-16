@@ -72,9 +72,9 @@ const Verify = () => {
               placeholder="Enter 4-digit code"
               value={code}
               onChange={handleChange}
-              className="w-full bg-white md:w-[55%] lg:w-[40%] h-[33px] lg:mt-16 mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] md:py-4 lg:py-8 lg:text-lg  rounded-2xl lg:rounded-3xl"
+              className="w-full bg-white md:w-[55%] lg:w-[40%] h-[33px] lg:mt-16 mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] md:py-4 lg:py-8 lg:text-[30px]  rounded-2xl lg:rounded-3xl"
             />
-            {loading && <div>Loading...</div>}
+            {loading && <div className="md:text-[26px]">Loading...</div>}
             {error && <div style={{ color: "red" }}>{error}</div>}{" "}
             {/* Display error when code is incorrect */}
           </div>

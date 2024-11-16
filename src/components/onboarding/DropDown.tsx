@@ -64,23 +64,9 @@ export default function DropDown({
     <div ref={dropdownRef}>
       <div
         onClick={handleSelectClick}
-        className="text-darkSilverColor px-6 lg:px-10 lg:py-4 rounded-2xl"
-        style={{
-          cursor: "pointer",
-          //display: 'inline-block',
-          display: "flex",
-          alignItems: "center",
-          backgroundColor: "#fff",
-          //width: isActive ? '86px' : '88px',
-          //width: isActive ? '142px' : '144px',
-          lineHeight: "19px",
-          fontSize: "13px",
-          borderRadius: "4px",
-          fontFamily: "system-ui, sans-serif",
-          //fontWeight: 'bold'
-          fontWeight: 400,
-        }}>
-        <span className="lg:text-[30px] p-2" style={{ flex: 1 }}>
+        className="text-darkSilverColor px-2 py-1 w-[137px]  md:w-[210px] md:h-[51px] cursor-pointer flex items-center bg-[#fff] rounded-md font-[700]"
+        >
+        <span className="text-[12px] md:text-[26px] mr-4" style={{ flex: 1 }}>
           {" "}
           {/* Added to push the arrow to the right */}
           {selectedIndustry || "Select"}
@@ -90,8 +76,8 @@ export default function DropDown({
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            height="12px"
-            width="12px"
+            height="15px"
+            width="15px"
             style={{ filter: "brightness(0.5)" }}>
             <g id="SVGRepo_bgCarrier" strokeWidth="5"></g>
             <g
@@ -111,22 +97,15 @@ export default function DropDown({
 
       {showDropdown && (
         <div
-          style={{
-            border: "1px solid #ccc",
-            padding: "10px",
-            position: "absolute",
-            backgroundColor: "#fff",
-            zIndex: 1000,
-            //width: '120px'
-            width: "135px",
-          }}>
+        className="border p-2 absolute bg-[#fff] z-50 w-[137px] md:w-[210px] rounded-md"
+          >
           <input
             type="text"
             placeholder="Search"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             style={{ width: "95%", marginBottom: "10px" }}
-            className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
+            className="w-[137px] md:w-[221px] bg-white h-[33px] mt-[13px] text-[12px] md:text-[20px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
           />
 
           <ul style={{ padding: 0, listStyleType: "none", margin: 0 }}>
@@ -139,6 +118,7 @@ export default function DropDown({
                   setShowDropdown(false);
                   setIsActive(true);
                 }}
+                className="text-[12px] md:text-[26px]"
                 style={{ cursor: "pointer", padding: "2px 0" }}>
                 {ind.name}
               </li>
@@ -150,6 +130,7 @@ export default function DropDown({
                 setShowDropdown(false);
                 setIsActive(true);
               }}
+              className="text-[12px] md:text-[26px]"
               style={{ cursor: "pointer", padding: "2px 0" }}>
               Other
             </li>
@@ -157,15 +138,15 @@ export default function DropDown({
         </div>
       )}
 
-      <div>
+      <div className="w-[137px] md:w-[210px]">
         {selectedIndustry === "Other" && (
           <input
             type="text"
             placeholder="Enter different industry"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{ marginTop: "10px", width: "145.5px" }}
-            className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
+            // style={{ marginTop: "10px", width: "145.5px" }}
+            className="w-full bg-white h-[51px] mt-[13px] text-[10px] md:text-[17px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
           />
         )}
       </div>

@@ -159,7 +159,7 @@ const Checklist = () => {
           </div>
           <div className="flex w-full justify-center">
             <button
-              className="text-[16px] md:text-xl font-bold text-white py-[10px] lg:text-[22px] p-2 w-[144px] md:w-[25%] lg:w-[15%] text-center mt-[10px] bg-palatinatePurple rounded-xl lg:rounded-2xl"
+              className="text-[16px] md:text-xl font-bold text-white py-[10px] lg:text-[22px] p-2 w-[144px] md:w-[25%] lg:w-[200px] text-center mt-[10px] bg-palatinatePurple rounded-xl lg:rounded-2xl"
               onClick={handleUpload}
               style={{ cursor: "pointer" }}>
               Upload Photo
@@ -177,7 +177,7 @@ const Checklist = () => {
               value={jobTitle || ""}
               onChange={handleJobTitleChange}
               style={{ marginTop: "10px", padding: "5px" }}
-              className="w-[137px] bg-white h-[33px] mt-[13px] text-[12px] md:text-lg text-darkSilverColor pl-[18px] py-[10px] rounded-lg">
+              className="w-[137px] bg-white h-[33px] mt-[13px] text-[12px] md:text-lg text-darkSilverColor pl-[18px] py-[10px] rounded-lg lg:text-[26px] lg:w-[250px] lg:px-4 lg:py-2">
               <option value="" disabled>
                 Choose one
               </option>
@@ -190,13 +190,13 @@ const Checklist = () => {
             className="flex justify-center pb-0 lg:pb-10"
             style={{ marginTop: "20px" }}>
             <button
-              className="text-[16px] md:text-xl font-bold text-white py-[10px] w-[120px] text-center  bg-palatinatePurple rounded-xl lg:rounded-2xl"
+              className="text-[16px] md:text-xl font-bold text-white py-[10px] w-[120px] text-center  bg-palatinatePurple rounded-xl lg:rounded-2xl lg:text-[36px] lg:px-10 lg:py-4 lg:w-[202px]"
               onClick={handleSkip}
               style={{ cursor: "pointer" }}>
               Skip
             </button>
             <button
-              className="ml-[7px] text-[16px] md:text-xl font-bold text-white py-[10px] w-[183px] text-center  bg-palatinatePurple rounded-xl lg:rounded-2xl"
+              className="ml-[7px] text-[16px] md:text-xl font-bold text-white py-[10px] w-[183px] text-center  bg-palatinatePurple rounded-xl lg:rounded-2xl lg:text-[36px] lg:px-10 lg:py-4 lg:w-[312px]"
               onClick={handleContinue}
               // disabled={!selectedFile}
               style={{ cursor: selectedFile ? "pointer" : "not-allowed" }}>

@@ -26,7 +26,7 @@ const MobileNumberInput: FC<MobileNumberInputProps> = ({
   return (
     <input
       type="text"
-      className="w-full bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] lg:py-8 lg:text-lg rounded-2xl lg:rounded-3xl"
+      className="w-full bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] lg:py-8 lg:text-[30px] rounded-2xl lg:rounded-3xl"
       placeholder="Enter mobile number"
       value={mobileNumber}
       onChange={handleChange}

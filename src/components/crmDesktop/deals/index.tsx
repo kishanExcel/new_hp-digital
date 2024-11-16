@@ -12,6 +12,7 @@ import TabNavigation from "../components/tabNavigation";
 import SearchBoxMobile from "../components/searchBoxMobile/page";
 import ExpansionPanel from "../components/expansionPanel";
 import Company1 from "../../../assets/images/companies-1.png";
+import Company2 from "../../../assets/images/companies-2.png";
 import ExpansionCardMobile from "../components/expansionCardMobile";
 import { useSession } from "next-auth/react";
 
@@ -211,6 +212,7 @@ const Index: React.FC = () => {
                   />
                 ))}
                  <ExpansionCard
+                  logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
@@ -218,24 +220,28 @@ const Index: React.FC = () => {
                   />
 
 <ExpansionCard
+                    logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
@@ -255,18 +261,21 @@ const Index: React.FC = () => {
                   />
                 ))}
                  <ExpansionCard
+                 logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
@@ -286,24 +295,28 @@ const Index: React.FC = () => {
                   />
                 ))}
                  <ExpansionCard
+                 logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
@@ -315,6 +328,7 @@ const Index: React.FC = () => {
                 .filter((deal) => deal.stage === "Won")
                 .map((deal) => (
                   <ExpansionCard
+                  logo={Company2}
                     key={deal.id}
                     description={deal.description}
                     dealNumber={deal.id}
@@ -323,18 +337,21 @@ const Index: React.FC = () => {
                   />
                 ))}
                  <ExpansionCard
+                 logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
@@ -354,30 +371,35 @@ const Index: React.FC = () => {
                   />
                 ))}
                  <ExpansionCard
+                 logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
@@ -398,24 +420,28 @@ const Index: React.FC = () => {
                   />
                 ))}
                  <ExpansionCard
+                 logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company1}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}
                     companyName="Finance"
                   />
                    <ExpansionCard
+                   logo={Company2}
                     description="Description for item"
                     dealNumber={"1"}
                     amount={100}

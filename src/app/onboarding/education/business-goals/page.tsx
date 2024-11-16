@@ -140,7 +140,7 @@ const Checklist = () => {
           </div>
           <div className="my-7 flex gap-4">
             <button
-              className="text-[16px] md:text-lg font-bold text-white py-[10px] px-[44px] text-center bg-palatinatePurple rounded-xl lg:rounded-xl"
+              className="text-[16px] md:text-lg font-bold text-white py-[10px] px-[44px] text-center bg-palatinatePurple rounded-xl lg:rounded-xl lg:text-[36px] lg:px-10 lg:py-4"
               onClick={handleSkip}
               disabled={!isAnyItemChecked}
               style={{ cursor: isAnyItemChecked ? "pointer" : "not-allowed" }}>
@@ -150,7 +150,7 @@ const Checklist = () => {
               onClick={handleContinue}
               disabled={!isAnyItemChecked} // Disable the button if no items are checked
               style={{ cursor: isAnyItemChecked ? "pointer" : "not-allowed" }}
-              className="text-[16px] font-bold md:text-lg text-white ml-[7px] md:ml-0 py-[10px] w-[192px] lg:w-[200px] text-center bg-palatinatePurple rounded-xl lg:rounded-xl">
+              className="text-[16px] font-bold md:text-lg text-white ml-[7px] md:ml-0 py-[10px] w-[192px] lg:w-[312px] text-center bg-palatinatePurple rounded-xl lg:rounded-2xl lg:text-[36px] lg:px-10 lg:py-4">
               Continue
             </button>
           </div>

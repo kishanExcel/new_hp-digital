@@ -71,7 +71,7 @@ const Trials: NextPage = () => {
                 <AutoComplete />
               </div>
               <button
-                className="text-[16px] md:text-lg font-bold text-white py-[10px] w-[221px] lg:text-[35px]  lg:w-[33  %]  lg:py-5 mt-[17px]  text-center bg-palatinatePurple rounded-2xl lg:rounded-[30px] "
+                className="text-[16px] md:text-[36px] font-bold text-white py-[10px]  mt-[17px]  w-[221px] md:w-[580px] md:mt-3  md:py-4 text-center bg-palatinatePurple rounded-2xl md:rounded-[30px] "
                 onClick={() => signOut()}
                 style={{ cursor: "pointer" }}>
                 Sign Out
