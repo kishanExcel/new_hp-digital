@@ -34,7 +34,7 @@ const HeadBar = ({ title, handleClick }: HeadBarProps): JSX.Element => {
 
   return (
     <div
-      className={`flex bg-[#631363] py-4 md:py-8 w-full justify-start items-center h-[50px] rounded-2xl ${handleClick ? "cursor-pointer" : ""}`}
+      className={`flex bg-[#631363] py-4 md:py-8 w-full justify-start items-center h-[38px] z-10 rounded-2xl ${handleClick ? "cursor-pointer" : ""}`}
       onClick={handleClick}>
       <span
         className="flex px-5 text-[16px] md:text-xl lg:text-[26px]"

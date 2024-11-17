@@ -12,6 +12,7 @@ import {
   PinterestSvgs,
   TwitterSvgs,
 } from "@/svgs/citations-builder/svgs";
+import Link from "next/link";
 
 // Styles for text and payment sections
 const textStyle: React.CSSProperties = {
@@ -68,11 +69,11 @@ const CitizanBuilderData = (): JSX.Element => {
       <div className="flex flex-col mb-6 my-3 w-full">
         <HeadBar title="Citation Builder Data" />
 
-        <div className="flex rounded-3xl -mt-10 z-10 min-h-[160px] justify-start px-5 md:max-w-full bg-[#E0E0E0] py-3">
+        <div className="flex rounded-3xl -mt-10 z-0 min-h-[160px] justify-start px-5 md:max-w-full bg-[#E0E0E0] py-3">
           <div className="my-9 w-full">
             {/* Instructions and placeholders */}
             <span
-              className="break-words md:tracking-normal tracking-normal w-full text-xs md:text-lg"
+              className="break-words text-[10px] md:tracking-normal tracking-normal w-full text-xs md:text-lg"
               style={textStyle}>
               Here you can provide additional, optional information such as
               Business Location contact details, working hours, photos, etc.
@@ -82,7 +83,7 @@ const CitizanBuilderData = (): JSX.Element => {
             <br />
             <br />
             <span
-              className="break-words md:tracking-normal tracking-normal w-full text-xs md:text-lg"
+              className="break-words text-[10px]  md:tracking-normal tracking-normal w-full text-xs md:text-lg"
               style={textStyle}>
               Enter the contact details that you want to be displayed on this
               client&apos;s directory listings. Brightlocal will never use this
@@ -124,15 +125,15 @@ const CitizanBuilderData = (): JSX.Element => {
 
             {/* Payment methods section */}
             <div
-              className="text-[#6D6D6D] text-xs py-3 md:py-5 md:text-lg md:text-[#631363]"
+              className="text-[#6D6D6D] text-[10px] py-3 md:py-5 md:text-lg md:text-[#631363] lg:text-[24px]"
               style={paymentStyle}>
               Payment methods accepted
             </div>
-            <div className="grid grid-cols-3 md:grid-cols-6 py-1 justify-start items-center gap-2">
+            <div className="grid grid-cols-3 md:grid-cols-6 py-1 justify-start items-center gap-1 lg:gap-2">
               <SquareCheckBoxButton label="Cash" id="Cash" />
               <SquareCheckBoxButton label="Visa" id="Visa" />
               <SquareCheckBoxButton
-                label="Financing Available"
+                label="Financing "
                 id="Financing"
               />
               <SquareCheckBoxButton
@@ -141,7 +142,7 @@ const CitizanBuilderData = (): JSX.Element => {
               />
               <SquareCheckBoxButton label="Invoice" id="Invoice" />
               <SquareCheckBoxButton
-                label="Traveler’s Check"
+                label="Traveler"
                 id="Traveler’s Check"
               />
               <SquareCheckBoxButton label="Mastercard" id="Mastercard" />
@@ -150,14 +151,14 @@ const CitizanBuilderData = (): JSX.Element => {
               <SquareCheckBoxButton label="PayPal" id="PayPal" />
               <SquareCheckBoxButton label="Discover" id="Discover" />
               <SquareCheckBoxButton
-                label="American Express"
+                label="American "
                 id="American Express"
               />
             </div>
 
             {/* Extra business categories */}
             <div
-              className="text-[#6D6D6D] text-xs py-2 md:py-5 md:text-lg md:text-[#631363]"
+              className="text-[#6D6D6D] text-xs py-2 md:py-5 md:text-lg md:text-[#631363] lg:text-[24px]"
               style={paymentStyle}>
               Extra business categories (recommended)
             </div>
@@ -171,7 +172,7 @@ const CitizanBuilderData = (): JSX.Element => {
 
             {/* List of services/products */}
             <div
-              className="text-[#6D6D6D] text-xs pt-3 pb-2 md:pt-5 md:text-lg md:text-[#631363]"
+              className="text-[#6D6D6D] text-xs pt-3 pb-2 md:pt-5 md:text-lg md:text-[#631363]  lg:text-[24px]"
               style={paymentStyle}>
               List of services / products
             </div>
@@ -207,14 +208,16 @@ const CitizanBuilderData = (): JSX.Element => {
         </div>
       </div>
       <div className="flex flex-col w-full md:items-end  items-start">
-        <button className="bg-[#40F440] w-[320px] ml-3 md:mr-3 mr-0 font-bold text-black p-2 rounded-lg mt-5">
+        <button className="bg-[#40F440] w-[320px] ml-3 md:mr-3 mr-0 font-bold text-black rounded-md lg:rounded-xl mt-5 lg:text-[36px] lg:w-[365px]">
+         <Link href='/citations-builder/final'>
           Save
+          </Link>
         </button>
-        <div className="flex justify-between w-[350px] px-4 py-2">
-          <button className="bg-[#631363] px-3 font-bold text-white p-2 rounded-xl mt-5">
-            Cancel Updates
+        <div className="flex justify-around  lg:justify-end   px-4 py-2 w-full">
+          <button className="bg-[#631363] text-[12px] px-3 py-1 font-bold text-white rounded-md  lg:rounded-xl mt-5 lg:text-[20px] lg:w-[174px] lg:h-[50px] lg:mr-2">
+            Cancel Update
           </button>
-          <button className="bg-[#DB0020] px-3 font-bold text-white p-2 rounded-xl mt-5">
+          <button className="bg-[#DB0020] text-[12px] px-3 py-1 font-bold text-white  rounded-md lg:rounded-xl mt-5 lg:text-[20px] lg:w-[174px] lg:h-[50px]">
             Delete Location
           </button>
         </div>

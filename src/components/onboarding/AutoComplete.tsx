@@ -280,7 +280,7 @@ export default function AutoComplete() {
           value={inputValue}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
-          className="w-[289px] bg-white h-[33px]  mt-[13px]  text-[12px] text-darkSilverColor pl-8 py-[10px]  rounded-2xl md:mt-20 md:w-[594px] md:h-[68px] md:text-[26px] "
+          className="w-[289px] bg-white h-[33px]  mt-[13px]  text-[12px] text-darkSilverColor pl-8 py-[10px]  rounded-2xl md:mt-20 md:w-[594px] md:h-[68px] md:text-[26px] lg:text-[30px] "
           style={{
             // paddingLeft: "25px", // make room for the magnifying glass icon
             backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23666' d='M14.7 13.3l-3-3a6.5 6.5 0 10-.9.9l3 3a.7.7 0 101-1zM1 6.5a5.5 5.5 0 1111 0 5.5 5.5 0 01-11 0z'/%3E%3C/svg%3E")`,
@@ -409,15 +409,18 @@ export default function AutoComplete() {
         </div>
       )}
       {showManualInput && (
-        <div>
-          <div style={{ marginTop: "8px" }}>
+        <div >
+          <div 
+          className="mt-[8px] md:mt-[100px] "
+          // style={{ marginTop: "8px" }}
+          >
             <input
               type="text"
               placeholder="Business Address"
               value={manualInputValue}
               onChange={handleManualInputChange}
               onKeyDown={handleKeyDown}
-              className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
+              className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg md:w-[594px] md:h-[68px] md:text-[26px] md:py-0 md:rounded-xl "
               style={{
                 width: "100%",
                 height: "35px",
@@ -479,7 +482,7 @@ export default function AutoComplete() {
               placeholder="Suite/Unit/Building (optional)"
               value={suite}
               onChange={handleSuiteChange}
-              className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
+              className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg md:w-[594px] md:h-[68px] md:text-[26px]"
               style={{
                 width: "100%",
                 height: "35px",
@@ -488,13 +491,12 @@ export default function AutoComplete() {
               }}
             />
           </div>
-          <div>
-            <input
-              type="text"
+          <div className="">
+            <input  type="text"
               placeholder="City"
               value={city}
               onChange={handleCityChange}
-              className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
+              className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg md:w-[250px]"
               style={{
                 marginTop: "8px",
                 width: "50%",
@@ -504,8 +506,7 @@ export default function AutoComplete() {
                 boxSizing: "border-box",
               }}
             />
-             <input
-              type="text"
+             <input type="text"
               placeholder="State/Province"
               value={city}
               onChange={handleCityChange}
@@ -532,8 +533,7 @@ export default function AutoComplete() {
              
               <option value="New York">NY</option>
             </select> */}
-            <input
-              type="text"
+            <input  type="text"
               placeholder="ZIP/Postal Code"
               value={zip}
               onChange={handleZipChange}

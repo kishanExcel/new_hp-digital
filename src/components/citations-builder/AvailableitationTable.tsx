@@ -47,11 +47,11 @@ const TableHeader: React.FC = (): JSX.Element => {
         </div>
       </div>
       <div className="flex w-full justify-center -mt-6 py-1 items-center h-[45px] bg-[#631363] rounded-t-3xl">
-        <div className="flex p-2 text-xs md:text-lg w-full gap-2 justify-between items-center">
+        <div className="flex p-2 text-xs md:text-lg w-full gap-2 justify-around items-center">
           <div className="flex gap-1 h-[40px] justify-between items-center">
-            <span style={{ ...typography }}>Citation Site</span>
+            <span style={{ ...typography }}>Citation Site</span> {" "}
             <span className="mt-0.5 font-[13px]">
-              <BuildermergeSvgs />
+              {/* <BuildermergeSvgs /> */}
             </span>
           </div>
           <div className="flex  gap-1 h-[40px] justify-center items-center">
@@ -59,13 +59,13 @@ const TableHeader: React.FC = (): JSX.Element => {
               Type of Site
             </span>
             <span className="mt-0.5 font-[13px]">
-              <BuildermergeSvgs />
+              {/* <BuildermergeSvgs /> */}
             </span>
           </div>
           <div className="flex  gap-1 h-[40px] justify-center items-center">
             <span style={{ ...typography }}>Authority</span>
             <span className="mt-0.5 font-[13px]">
-              <BuildermergeSvgs />
+              {/* <BuildermergeSvgs /> */}
             </span>
           </div>
           <div className="flex w-[80px] h-[40px] justify-center items-center">

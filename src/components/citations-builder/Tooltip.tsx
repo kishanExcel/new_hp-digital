@@ -5,7 +5,7 @@ import { InfoSvgs } from "@/svgs/seo-screens/svgs";
 const Typography: React.CSSProperties = {
   color: "#631363",
   fontFamily: "Arial",
-  fontSize: "9px",
+  // fontSize: "9px",
   fontStyle: "normal",
   fontWeight: 400,
   lineHeight: "normal",
@@ -34,8 +34,20 @@ export default function Tooltip({
     <div className="group relative flex max-w-max z-50 flex-col items-center justify-center">
       <div className="absolute left-[20px] -top-16 rotate-180 ml-auto mr-auto min-w-max -translate-x-1/2 scale-0 transform rounded-3xl p-2 px-3 py-2 text-xs font-medium transition-all duration-500 group-hover:scale-100">
         <div className="flex max-w-xs flex-col items-center shadow-lg">
-          <div className="flex clip-bottom h-2 w-4 ml-4 bg-[#631363]"></div>
-          <div className="rounded rotate-180 w-[150px] h-full bg-[#631363] p-2 text-center text-xs text-white">
+          {/* <div className="flex clip-bottom h-2 w-4 ml-4 bg-[#631363]"></div> */}
+          <div
+  className="flex clip-bottom"
+  style={{
+    width: 0,
+    height: 0,
+    borderLeft: "8px solid transparent", // Left side of the triangle
+    borderRight: "8px solid transparent", // Right side of the triangle
+    borderBottom: "8px solid #631363", // Triangle pointing upward with color
+    marginLeft: "16px", // 
+  }}
+></div>
+
+          <div className=" rotate-180 w-[150px] h-full bg-[#631363] p-2 text-center text-xs text-white rounded-xl">
             {message}
           </div>
         </div>
@@ -56,9 +68,9 @@ export default function Tooltip({
 export const TooltipIcon = (): JSX.Element => {
   return (
     <Tooltip message="This Citation allows you to hide the address.">
-      <div className="cursor-pointer flex flex-col gap-1">
-        <span style={Typography}>Learn More</span>
-        <div className="">
+      <div className="cursor-pointer flex flex-col gap-1 lg:w-[90px]">
+        <span style={Typography} className="text-[9px] lg:text-[16px]">Learn More</span>
+        <div className=" ">
           {" "}
           <LineSvgs />
         </div>

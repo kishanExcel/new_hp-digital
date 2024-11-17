@@ -55,7 +55,7 @@ const BuilderItemCard = ({
               {/* SVG and label */}
               {labelSvg}
               <span
-                className="text-xs md:text-lg"
+                className="text-xs md:text-[20px]"
                 style={{ ...Typography, fontWeight: 700 }}>
                 {label}
               </span>

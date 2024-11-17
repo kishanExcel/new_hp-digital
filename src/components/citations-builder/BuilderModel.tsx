@@ -12,7 +12,7 @@ const typography: React.CSSProperties = {
   color: "#6D6D6D",
   textAlign: "center",
   fontFamily: "Arial",
-  fontSize: "11px",
+  // fontSize: "11px",
   fontStyle: "normal",
   fontWeight: 400,
   lineHeight: "normal",
@@ -50,18 +50,18 @@ const BuilderModel = ({ closeModal, fontSize="11px" }: ModalProps): JSX.Element 
   }, [handleClickOutside]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 ">
       {/* Modal content */}
-      <div className="bg-white w-[380px] pt-3 h-[250px] rounded-lg" ref={modalRef}>
-        <div className="rounded-3xl gap-3 flex-col flex justify-center items-center">
+      <div className="bg-white w-[350px] pt-3 h-[250px] rounded-lg lg:w-[450px] lg:h-[330px]" ref={modalRef}>
+        <div className="rounded-3xl gap-3 flex-col flex justify-center items-center lg:h-[75%]">
           <div className="z-20">
             {/* Icon */}
             <BuilderYPSvgs />
           </div>
 
-          <div className="flex w-[340px] z-10 -mt-12  justify-center items-center bg-[#E0E0E0] h-[135px] rounded-2xl">
+          <div className="flex w-[340px] z-10 -mt-12  justify-center text-[11px] items-center bg-[#E0E0E0] h-[135px] rounded-2xl lg:w-[80%] lg:h-full lg:text-[18px] lg:-mt-8">
             {/* Modal text */}
-            <span className="flex " style={{...typography,fontSize:fontSize}}>
+            <span className="flex " style={{...typography}}>
               Yellow Pages remains one of the most trusted names in business listings. 
               Together with DexKnows and Superpages, this listing network boasts 80 
               million users per month and forms a powerful channel to get your business 
@@ -73,7 +73,7 @@ const BuilderModel = ({ closeModal, fontSize="11px" }: ModalProps): JSX.Element 
           {/* Cancel button */}
           <button
             onClick={closeModal}
-            className="px-4 py-2 rounded-2xl bg-[#A0002A]"
+            className="px-4 py-2 rounded-xl bg-[#A0002A] text-[11px] lg:text-[26px]"
             style={{ ...typography, color: "white" }}
           >
             Cancel

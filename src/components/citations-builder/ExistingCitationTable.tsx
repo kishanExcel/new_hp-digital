@@ -35,8 +35,8 @@ const CitationTable: React.FC = (): JSX.Element => {
           <div className="flex w-full gap-1 justify-center items-center">
             <span style={{ ...typography }}>
               Citation Site{" "}
-              <span className="mt-0.5 font-[13px]">
-                <BuildermergeSvgs />
+              <span className="mt-0.5 font-[13px] lg:text-[20px]">
+                {/* <BuildermergeSvgs /> */}
               </span>
             </span>
           </div>
@@ -58,7 +58,7 @@ const CitationTable: React.FC = (): JSX.Element => {
           <div className="flex w-full flex-col h-[40px] justify-center items-center">
             <span style={{ ...typography }}>
               {" "}
-              <span className=" px-1 font-[13px]">
+              <span className=" px-1 font-[400]">
                 <BuilderRectangleSvgs />
               </span>
               Update

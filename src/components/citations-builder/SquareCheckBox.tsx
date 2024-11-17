@@ -25,7 +25,7 @@ const SquareCheckBoxButton: React.FC<SquareCheckBoxButtonProps> = ({
 }: SquareCheckBoxButtonProps): JSX.Element => {
   return (
     <div
-      className="flex gap-3 items-center py-1 text-base cursor-pointer"
+      className="flex gap-1 lg:gap-3 items-center py-1 text-base cursor-pointer"
       style={{ display: "flex", alignItems: "center" }}>
       <Checkbox
         id={id}
@@ -35,7 +35,7 @@ const SquareCheckBoxButton: React.FC<SquareCheckBoxButtonProps> = ({
       />
       <Label
         htmlFor={id}
-        className="font-medium text-[#6D6D6D] text-xs md:text-lg lg:text-2xl">
+        className="font-[700] text-[#6D6D6D] text-[10px] md:text-lg lg:text-[24px]">
         {label}
       </Label>
     </div>

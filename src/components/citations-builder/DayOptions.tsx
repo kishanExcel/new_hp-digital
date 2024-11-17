@@ -11,7 +11,7 @@ interface DayProps {
 const labelStyle: React.CSSProperties = {
   color: "#6D6D6D",
   fontFamily: "Arial",
-  fontSize: "14px",
+  // fontSize: "14px",
   fontStyle: "normal",
   fontWeight: 700,
   lineHeight: "normal",
@@ -20,7 +20,7 @@ const labelStyle: React.CSSProperties = {
 const inputStyle: React.CSSProperties = {
   color: "#6D6D6D",
   fontFamily: "Arial",
-  fontSize: "12px",
+  // fontSize: "12px",
   fontStyle: "normal",
   fontWeight: 400,
   lineHeight: "normal",
@@ -40,25 +40,25 @@ const inputStyle: React.CSSProperties = {
 const DayOptions: React.FC<DayProps> = ({ day }) => {
   return (
     <div className="flex w-full justify-center my-3">
-      <div className={`flex items-center  gap-2 md:w-full md:gap-12`}>
+      <div className={`flex items-center  gap-2 md:w-full md:gap-16`}>
         <label
           htmlFor="day"
           style={{ ...labelStyle }}
-          className={`text-sm font-[12px] md:font-[15px] w-7 pr-6 md:w-[32px]`}>
+          className={`text-[10px]  md:text-[15px] w-7 mr-6 md:w-[32px] lg:text-[20px] lg:mr-16 `}>
           {day}
         </label>
-        <div className="relative h-full">
+        <div className="relative h-full  ">
           <select
             id="day"
             style={{ ...inputStyle }}
-            className={`bg-gray-50 w-[80px] pr-6 h-full font-[12px] md:font-[15px] cursor-pointer border border-transparent appearance-none text-sm rounded-lg focus:outline-none block p-2.5 md:w-44`}>
+            className={`bg-gray-50 w-[69px]  min-w-[69px] min-h-[25px] mr-[5px] lg:pr-6 h-full text-[12px] md:text-[15px] cursor-pointer border border-transparent appearance-none  rounded-lg focus:outline-none block lg:p-2.5 md:w-44`}>
             <option
               style={{ ...inputStyle }}
-              className="text-center bg-[#8C8C8C] bg-opacity-20 font-[12px] md:font-[15px] p-3 h-10 py-4">
+              className="text-center bg-[#8C8C8C] bg-opacity-20 text-[12px] md:text-[15px] p-3 h-10 py-4 lg:text-[20px]">
               Open
             </option>
             <option
-              className="text-center bg-[#8C8C8C] bg-opacity-20 h-10 p-3 py-4 px-4 font-[12px] md:font-[15px]"
+              className="text-center bg-[#8C8C8C] bg-opacity-20 h-10 p-3 py-4 px-4 text-[12px] md:text-[15px] lg:text-[20px]"
               style={{ ...inputStyle }}>
               Close
             </option>
@@ -74,7 +74,7 @@ const DayOptions: React.FC<DayProps> = ({ day }) => {
         />
         <span
           style={{ ...labelStyle }}
-          className="text-center font-[12px] md:font-[15px]">
+          className="text-center text-[12px] md:text-[15px]">
           to
         </span>
         <input

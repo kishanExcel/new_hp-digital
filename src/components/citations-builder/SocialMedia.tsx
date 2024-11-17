@@ -36,13 +36,14 @@ const SocialMedia = ({
     <div className="flex flex-col">
       <div className="flex my-2">
         <label
-          className="font-semibold text-xs md:text-lg"
+          className="font-semibold text-xs md:text-lg lg:text-[24px]"
           style={{ ...labelStyle }}>
           {label}
         </label>
       </div>
-      <div className="flex w-full bg-[#ffffff] rounded-2xl h-full p-3">
+      <div className="flex w-full lg:w-[80%] bg-[#ffffff] rounded-2xl h-full p-[2px] lg:p-3">
         {svg}
+        <input type="text" className="w-full h-full focus:outline-none rounded-2xl lg:text-[16px] ml-4"/>
       </div>
     </div>
   );

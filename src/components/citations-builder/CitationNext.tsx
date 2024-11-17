@@ -1,8 +1,8 @@
 import { MenuIcon } from "@/svgs/checkIn/svgs";
 import React from "react";
-import BuilderFiledCard from "./BuilderFiledCard";
 import CitationNavbar from "./CitationNavbar";
 import ReviewNavbar from "../review-dashboard-mobile/ReviewNavbar";
+import CitationFinal from "./CitationFinal";
 
 const Typography: React.CSSProperties = {
   fontFamily: "Arial",
@@ -30,17 +30,17 @@ const CheckInStyle: React.CSSProperties = {
  *
  * @returns {JSX.Element} The rendered component.
  */
-const Citations: React.FC = (): JSX.Element => {
+const CitationsNext: React.FC = (): JSX.Element => {
   return (
     <div className="flex justify-center items-center md:items-start w-full">
       <div className="flex flex-col  w-full absolute bg-[#F4F4F4] top-0 items-center">
         <ReviewNavbar heading={" Citations Builder"}  isHeaderVisible={false} />
         <div className="flex flex-col justify-center mx-auto my-2 lg:px-28 md:px-10 w-full">
-          <BuilderFiledCard />
+          <CitationFinal />
         </div>
       </div>
     </div>
   );
 };
 
-export default Citations;
+export default CitationsNext;

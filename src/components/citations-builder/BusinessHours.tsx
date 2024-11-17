@@ -23,19 +23,19 @@ const BusinessHours: React.FC = (): JSX.Element => {
   return (
     <div className="flex flex-col my-3 w-full">
       <HeadBar title="Business Hours" />
-      <div className="flex rounded-3xl -mt-10 z-10 min-h-[160px] justify-start  px-5 w-full bg-[#E0E0E0] py-3">
+      <div className="flex rounded-3xl -mt-10 z-0 min-h-[160px] justify-start  px-5 w-full bg-[#E0E0E0] py-3">
         <div className="my-9 w-full flex flex-col justify-start">
           {/* Render options for each day of the week */}
-          <DayOptions day={"Mon"} />
-          <DayOptions day={"Tue"} />
-          <DayOptions day={"Wed"} />
-          <DayOptions day={"Thu"} />
-          <DayOptions day={"Fri"} />
-          <DayOptions day={"Sat"} />
-          <DayOptions day={"Sun"} />
+          <DayOptions day={"Monday"} />
+          <DayOptions day={"Tuesday"} />
+          <DayOptions day={"Wednesday"} />
+          <DayOptions day={"Thursday"} />
+          <DayOptions day={"Friday"} />
+          <DayOptions day={"Saturday"} />
+          <DayOptions day={"Sunday"} />
           <div className="flex -ml-2 pl-2 py-2 md:py-4 w-full items-center">
             <span
-              className="font-medium text-[8px] lg:text-lg md:text-base"
+              className="font-[400] text-[8px] lg:text-[26px]  md:text-base"
               style={Typography}>
               Please only use allowed working hours formats such as, 14:45, 2:45
               pm

@@ -47,12 +47,12 @@ const ListDropDown: React.FC<DropdownProps> = ({
   );
 
   return (
-    <div className={`relative inline-block w-full`}>
+    <div className={`relative inline-block w-full lg:w-[80%]`}>
       <div
-        className="md:p-2 p-1 md:py-3 py-2  cursor-pointer flex justify-between items-center bg-[#faf9f9] w-full focus:outline-none rounded-2xl px-8 appearance-none"
+  className="md:p-2 p-1 md:py-3 py-2 min-h-[25px]  cursor-pointer flex justify-between items-center bg-[#faf9f9] w-full focus:outline-none rounded-2xl px-8 appearance-none lg:min-h-[44px]"
         onClick={toggleDropdown}>
-        <span className="text-[#631363] text-center w-full">
-          {selectedOption ? selectedOption.label : "Select an option"}
+        <span className="text-[#631363] text-center w-full ">
+          {selectedOption ? selectedOption.label : ""}
         </span>
         <span
           className={`transform transition-transform ${

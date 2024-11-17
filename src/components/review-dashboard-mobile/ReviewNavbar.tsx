@@ -45,7 +45,7 @@ const CitationNavbar = ({
         <div className="px-5 py-4">
           <MenuIcon />
         </div>
-        <div className="flex justify-center items-center flex-grow w-full">
+        <div className="flex justify-center items-center flex-grow w-full ">
           <span className="-ml-3" style={reputationStyle}>
             {heading}
           </span>

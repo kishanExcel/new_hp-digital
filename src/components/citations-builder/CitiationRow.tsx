@@ -46,7 +46,7 @@ export const CitationRow: React.FC<CitationRowProps> = ({
   return (
     <div
       className={`flex w-full justify-center items-center text-xs md:text-lg h-[45px] bg-[${bgColor}]`}>
-      <div className="flex p-2 w-full gap-2 justify-center items-center">
+      <div className="flex p-2 w-full gap-2 justify-between items-center">
         <div className="flex gap-1 flex-1 h-[40px] justify-center items-center">
           <span
             className="text-xs md:text-lg"
