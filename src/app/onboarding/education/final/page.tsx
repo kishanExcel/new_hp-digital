@@ -102,6 +102,24 @@ const Final: React.FC = () => {
               Go to CRM
               </Link>
             </button>
+            <button
+              className="text-[16px] lg:text-[36px] font-bold text-white py-[10px] w-[221px] lg:w-[30%] text-center mt-[20px] bg-palatinatePurple rounded-xl"
+              onClick={handleContinueClick}
+              style={{ cursor: "pointer" }}>
+                <Link href='/citations-builder'>
+              {/* Skip This For Now */}
+              Go to Citation Builder
+              </Link>
+            </button>
+            <button
+              className="text-[16px] lg:text-[36px] font-bold text-white py-[10px] w-[221px] lg:w-[30%] text-center mt-[20px] bg-palatinatePurple rounded-xl"
+              onClick={handleContinueClick}
+              style={{ cursor: "pointer" }}>
+                <Link href='/reputation-manager'>
+              {/* Skip This For Now */}
+              Go to Reputation
+              </Link>
+            </button>
           
           </div>
           <div className="absolute lg:hidden bottom-14">

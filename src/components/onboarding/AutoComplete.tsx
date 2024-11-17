@@ -215,7 +215,7 @@ export default function AutoComplete() {
   const handleCityChange = (event: ChangeEvent<HTMLInputElement>) => {
     setCity(event.target.value);
   };
-  const handleStateChange = (event: ChangeEvent<HTMLSelectElement>) => {
+  const handleStateChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSelectedState(event.target.value);
   };
   const handleZipChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -408,162 +408,72 @@ export default function AutoComplete() {
           </div>
         </div>
       )}
-      {showManualInput && (
-        <div >
-          <div 
-          className="mt-[8px] md:mt-[100px] "
-          // style={{ marginTop: "8px" }}
-          >
-            <input
-              type="text"
-              placeholder="Business Address"
-              value={manualInputValue}
-              onChange={handleManualInputChange}
-              onKeyDown={handleKeyDown}
-              className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg md:w-[594px] md:h-[68px] md:text-[26px] md:py-0 md:rounded-xl "
-              style={{
-                width: "100%",
-                height: "35px",
-                padding: "4px",
-                boxSizing: "border-box",
-              }}
-            />
-            {showManualDropdown && (
-              <div
-                className="text-darkSilverColor"
-                style={{
-                  position: "absolute",
-                  zIndex: 1,
-                  background: "#fff",
-                  border: "2px solid #ccc",
-                  marginTop: "0px",
-                  width: "98.8%",
-                  overflowY: "auto",
-                  maxHeight: "200px",
-                  fontSize: "12px",
-                  fontWeight: 700,
-                }}>
-                {manualDropdownItems.map((item, index) => (
-                  <p
-                    key={index}
-                    onClick={() => handleManualDropdownItemClick(item)}
-                    style={{ cursor: "pointer", marginTop: "0px" }}>
-                    {/* {item} */}
-                  </p>
-                ))}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    alignItems: "center",
-                    borderTop: "2px solid transparent",
-                    padding: "4px",
-                  }}>
-                  <Image
-                    src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_74x24dp.png"
-                    alt="Powered by Google"
-                    width={74}
-                    height={24}
-                  />
-                  <a
-                    href="https://www.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "#333", textDecoration: "underline" }}>
-                    Powered by Google
-                  </a>
-                </div>
-              </div>
-            )}
-          </div>
-          <div style={{ marginTop: "" }}>
-            <input
-              type="text"
-              placeholder="Suite/Unit/Building (optional)"
-              value={suite}
-              onChange={handleSuiteChange}
-              className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg md:w-[594px] md:h-[68px] md:text-[26px]"
-              style={{
-                width: "100%",
-                height: "35px",
-                padding: "4px",
-                boxSizing: "border-box",
-              }}
-            />
-          </div>
-          <div className="">
-            <input  type="text"
-              placeholder="City"
-              value={city}
-              onChange={handleCityChange}
-              className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg md:w-[250px]"
-              style={{
-                marginTop: "8px",
-                width: "50%",
-                marginRight: "4%",
-                height: "35px",
-                padding: "4px",
-                boxSizing: "border-box",
-              }}
-            />
-             <input type="text"
-              placeholder="State/Province"
-              value={city}
-              onChange={handleCityChange}
-              className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
-              style={{
-                marginTop: "8px",
-                width: "45%",
-                height: "35px",
-                padding: "4px",
-                boxSizing: "border-box",
-              }}
-            />
-            {/* <select
-              value={selectedState}
-              onChange={handleStateChange}
-              className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
-              style={{
-                width: "45%",
-                height: "35px",
-                padding: "4px",
-                boxSizing: "border-box",
-              }}>
-              <option value="" className="text-[#6D6D6D]">State/Province</option>
-             
-              <option value="New York">NY</option>
-            </select> */}
-            <input  type="text"
-              placeholder="ZIP/Postal Code"
-              value={zip}
-              onChange={handleZipChange}
-              className=" bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
-              style={{
-                marginTop: "8px",
-                width: "50%",
-                marginRight: "4%",
-                height: "35px",
-                padding: "4px",
-                boxSizing: "border-box",
-              }}
-            />
-            <select
-              value={selectedCountry}
-              onChange={handleCountryChange}
-              className="w-[221px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg"
-              style={{
-                width: "45%",
-                height: "35px",
-                padding: "4px",
-                boxSizing: "border-box",
-              }}>
-              <option value="United States">United States</option>
-              {/* The other options here... */}
-              <option value="Afghanistan">Afghanistan</option>
-            </select>
-          </div>
-        </div>
-      )}
+     
+     {showManualInput && (
+  <div>
+    <div className="mt-[8px] md:mt-[20px]">
+      <input
+        type="text"
+        placeholder="Business Address"
+        value={manualInputValue}
+        onChange={handleManualInputChange}
+        onKeyDown={handleKeyDown}
+        className="w-[289px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg 
+                   md:w-[594px] md:h-[68px] md:text-[26px] md:py-0 md:rounded-2xl lg:text-[30px]"
+      />
+    </div>
+    <div>
+      <input
+        type="text"
+        placeholder="Suite/Unit/Building (optional)"
+        value={suite}
+        onChange={handleSuiteChange}
+        className="w-[289px] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg 
+                   md:w-[594px] md:h-[68px] md:text-[26px] md:py-0 md:rounded-2xl lg:text-[30px]"
+      />
+    </div>
+    <div className="w-[289px] md:w-[594px] flex justify-between">
+      <input
+        type="text"
+        placeholder="City"
+        value={city}
+        onChange={handleCityChange}
+        className="w-[47%] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg 
+                   md:w-[49%] md:h-[68px] md:text-[26px] md:py-0 md:rounded-2xl lg:text-[30px]"
+      />
+      <input
+        type="text"
+        placeholder="State/Province"
+        value={selectedState}
+        onChange={handleStateChange}
+        className="w-[47%] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg 
+                   md:w-[49%] md:h-[68px] md:text-[26px] md:py-0 md:rounded-2xl lg:text-[30px]"
+      />
+    </div>
+    <div className="w-[289px] md:w-[594px] flex justify-between">
+      <input
+        type="text"
+        placeholder="ZIP/Postal Code"
+        value={zip}
+        onChange={handleZipChange}
+        className="w-[47%] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg 
+                   md:w-[49%] md:h-[68px] md:text-[26px] md:py-0 md:rounded-2xl lg:text-[30px]"
+      />
+      <select
+        value={selectedCountry}
+        onChange={handleCountryChange}
+        className="w-[47%] bg-white h-[33px] mt-[13px] text-[12px] text-darkSilverColor pl-[18px] py-[10px] rounded-lg 
+                   md:w-[49%] md:h-[68px] md:text-[26px] md:py-0 md:rounded-2xl lg:text-[30px]"
+      >
+        <option value="United States">United States</option>
+        <option value="Afghanistan">Afghanistan</option>
+        {/* Other options */}
+      </select>
+    </div>
+  </div>
+)}
+
+
       <button
         className="text-[16px] md:text-[36px] font-bold text-white py-[10px]  mt-[17px]  w-[221px] md:w-[580px] md:mt-40  md:py-4 text-center bg-palatinatePurple rounded-2xl md:rounded-[30px]"
         onClick={handleContinueClick}
