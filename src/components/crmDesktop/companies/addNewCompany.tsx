@@ -46,7 +46,7 @@ const NewCompanyForm: React.FC = () => {
   }, [session]);
   const [businessTypes, setBusinessTypes] = useState([]);
   const [formData, setFormData] = useState({
-    token: session?.accessToken[0],
+    token: session?.accessToken,
     name: "",
     business: "",
     size: "",
@@ -63,7 +63,7 @@ const NewCompanyForm: React.FC = () => {
   });
 
   const [formBusinessTypeData, setFormBusinessTypeData] = useState({
-    token: session?.accessToken[0],
+    token: session?.accessToken,
     userId: "",
     businessType: "", // For input field
   });
@@ -95,6 +95,7 @@ const NewCompanyForm: React.FC = () => {
       });
 
       const businessTypeData = await response.json();
+      console.log("businessTypeData",businessTypeData);
       setBusinessTypes(businessTypeData);
       console.log("Business types fetched:", businessTypeData);
     } catch (error) {
@@ -117,13 +118,14 @@ const NewCompanyForm: React.FC = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          token: session?.accessToken[0], // Ensure this is correct
+          token: session?.accessToken, // Ensure this is correct
           name: formBusinessTypeData.businessType, // Passing correct field name
           userId: session?.user?.id, // Ensure correct user ID is passed
         }),
       });
-
+console.log("response:",response);
       if (response.ok) {
+        alert("added")
         showToast(`Business Type added successfully!`, "success");
         setShowPopup(false); // Hide popup
       } else {
@@ -173,7 +175,7 @@ const NewCompanyForm: React.FC = () => {
     }
 
     const payload = {
-      token: session?.accessToken[0],
+      token: session?.accessToken,
       name: formData.name,
       business: formData.business,
       size: formData.size,
@@ -203,6 +205,7 @@ const NewCompanyForm: React.FC = () => {
         console.error("Error response from server:", responseBody);
         throw new Error("Failed to create company");
       }
+      alert("Company created")
       showToast(`Company added successfully!`, "success");
       router.push("/crmDesktop/companies/");
     } catch (error) {

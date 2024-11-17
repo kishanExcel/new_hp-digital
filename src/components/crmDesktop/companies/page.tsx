@@ -46,9 +46,34 @@ const Companies: React.FC = () => {
   useEffect(() => {
     if (session?.user?.id) {
       getAllData(); // Fetch all data in one go
+      getCompany();
     }
   }, [session?.user?.id]);
 
+  const getCompany = async () =>{
+    const userId = session?.user?.id;
+    if (!userId) {
+      console.error("No user ID found in session.");
+      return;
+
+    }
+    try {
+      // Fetch all companies, contacts, and deals concurrently
+      let data = await fetch("/api/company/get-company", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({ userId }),
+      })
+      console.log("data++++++++++",data);
+
+     
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
   const getAllData = async () => {
     const userId = session?.user?.id;
     if (!userId) {
