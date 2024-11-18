@@ -23,6 +23,7 @@ const Companies: React.FC = () => {
   const router = useRouter();
   const { data: session, status } = useSession();
   // console.log("session?.session[0]", session?.session[0]);
+  console.log("session?.session[0]", session);
   // const [token, setToken] = useState(session?.session[0]);
   const [companiesList, setCompaniesList] = useState([]);
   const [dealsdata, setDealsdata] = useState([]);

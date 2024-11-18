@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { Menu, RefreshCw } from "lucide-react";
 import Image from "next/image";
 import logo from "@/assets/images/hubspark/HubSparkLogo.png";
 import { RefreshCcw } from "lucide-react";
@@ -47,7 +47,7 @@ export default function MobileHeader({ headerTitle }: MobileHeaderProps) {
             <div className="font-bold text-2xl text-center">{headerTitle}</div>
             <div className="w-40 bg-[#631363] h-2 rounded-full"></div>
           </div>
-          <div
+          {/* <div
             className="bg-[#631363]  mr-2 flex w-60 justify-center items-center gap-4"
             style={{
               background: "linear-gradient(to right, white 10%, #631363 2%)",
@@ -58,8 +58,26 @@ export default function MobileHeader({ headerTitle }: MobileHeaderProps) {
               <RefreshCcw color="white" />
             </Button>
             <Image src={avtar} alt="HubSpark Logo" width={20} height={20} />
-            <div className="text-white font-semibold">John Doe</div>
-          </div>
+            <div className="text-white text-sm lg:text-base font-semibold">John Doe</div>
+          </div> */}
+          <div className="relative flex items-center justify-end h-full px-6 z-10">
+              <div className="flex items-center space-x-4 text-white">
+                <div className="flex absolute gap-4 md:ga-1 top-4 left-20 justify-center items-center">
+                  <RefreshCw className="cursor-pointer" color="#FFF" />
+                  <Image
+                    className="cursor-pointer"
+                    src="/profle.png"
+                    alt="Google Icon"
+                    width={40}
+                    height={40}
+                  />
+
+                  <span className="text-white cursor-pointer font-semibold text-sm lg:text-base">
+                    John Doe
+                  </span>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
